@@ -3,20 +3,29 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Followme demo</title>
 	</head>
-	<body>
+	<body
+		class="[&::-webkit-scrollbar]:w-1
+  [&::-webkit-scrollbar-track]:bg-gray-100
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-300
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700">
 		<slot />
 	</body>
 </html>
 
 <style>
+	@font-face {
+		font-family: "AfacadFlux";
+		src: url("/public/fonts/AfacadFlux.ttf");
+	}
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		font-family: "AfacadFlux", sans-serif;
 	}
 </style>
